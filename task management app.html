@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./assets/css/task management app.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="stars" id="stars"></div>
+    <div id="particles"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Task Manager</h1>
+            <p>Organize your universe, one task at a time</p>
+        </div>
+
+        <!-- Task Input Section -->
+        <div class="task-input-section">
+            <div class="input-group">
+                <input type="text" id="taskTitle" class="input-field" placeholder="Task title..." maxlength="100">
+                <input type="text" id="taskDescription" class="input-field" placeholder="Description..." maxlength="200">
+                <select id="taskPriority" class="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="addTaskBtn" class="add-btn">Add Task</button>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+            <button class="filter-btn" data-filter="medium">Medium Priority</button>
+            <button class="filter-btn" data-filter="low">Low Priority</button>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <!-- Tasks Container -->
+        <div class="tasks-container" id="tasksContainer">
+            <!-- Tasks will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="./assets/js/task management app.js"></script>
+</body>
+</html>
